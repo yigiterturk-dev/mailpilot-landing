@@ -274,13 +274,16 @@
       <div class="box">
         <h2>15 dakikada paneli gör.</h2>
         <p>Ajansını, müşteri sayını ve aylık mail hacmini yaz. Uygun saatte demo linki gönderelim.</p>
-        <form id="demoForm">
+        <form id="demoForm" action="https://formsubmit.co/r.y.erturk@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="MailPilot demo isteği">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
           <input type="text" name="ad" placeholder="Adın" required>
           <input type="text" name="ajans" placeholder="Ajans / şirket" required>
           <input type="email" name="email" placeholder="E-posta" required>
           <button class="btn btn-acid" type="submit">Demo iste →</button>
         </form>
-        <p class="small">Form şu an e-posta ile açılıyor. Gerçek form için Formspree/Tally linki bağlanacak.</p>
+        <p class="small">Form ilk gönderimde e-posta onayı ister; sonrası otomatik gelir.</p>
       </div>
     </div>
   </section>
@@ -294,13 +297,6 @@
 </footer>
 
 <script>
-  var f=document.getElementById('demoForm');
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var d=new FormData(f);
-    var body='Ad: '+d.get('ad')+'\nAjans: '+d.get('ajans')+'\nE-posta: '+d.get('email');
-    location.href='mailto:merhaba@mailpilot.app?subject='+encodeURIComponent('Demo isteği')+'&body='+encodeURIComponent(body);
-  });
   if(window.matchMedia('(max-width:820px)').matches){
     document.querySelector('.nav-links').style.display='none';
   }
