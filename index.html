@@ -11,7 +11,7 @@
 <style>
   :root{
     --bg:#0b0c0b; --panel:#121411; --line:#242a22; --line-soft:#1a1e19;
-    --fg:#eef2ea; --muted:#9aa596; --dim:#697365;
+    --fg:#eef2ea; --muted:#9aa596; --dim:#9aa596;
     --acid:#c6ff3d; --acid-dim:#8fb52a; --ink:#0b0c0b;
     --max:1120px; --r:14px;
   }
@@ -34,7 +34,7 @@
   .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:18px}
   .logo .dot{width:9px;height:9px;background:var(--acid);border-radius:2px;box-shadow:0 0 14px rgba(198,255,61,.55)}
   .nav-links{display:flex;align-items:center;gap:26px;font-size:14px;color:var(--muted)}
-  .nav-links a:hover{color:var(--fg)}
+  .nav-links a:not(.btn):hover{color:var(--fg)}
   .btn{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:11px 18px;font-weight:600;font-size:14px;border:1px solid transparent;cursor:pointer;transition:.15s}
   .btn-acid{background:var(--acid);color:var(--ink)}
   .btn-acid:hover{background:#d4ff6b;transform:translateY(-1px)}
